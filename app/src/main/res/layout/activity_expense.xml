@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".UserActivities.Expense">
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swiperefresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+ <LinearLayout
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+     android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_margin="10dp"
+        android:background="@drawable/shape_rectangle"
+        android:layout_height="wrap_content">
+<com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/animation_view"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="10dp"
+    android:layout_centerInParent="true"
+            android:layout_alignParentStart="true"
+            app:lottie_rawRes="@raw/back"
+            app:lottie_loop="true"
+            app:lottie_autoPlay="true" />
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:src="@drawable/month"></ImageView>
+
+    </RelativeLayout>
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+       android:elevation="10dp"
+        android:layout_margin="10dp"
+        app:cardCornerRadius="10dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_margin="10dp"
+            android:gravity="center"
+            android:layout_height="match_parent">
+            <ImageView
+                android:id="@+id/dele"
+                android:layout_alignParentEnd="true"
+                android:layout_width="150dp"
+                android:layout_height="100dp"
+                android:src="@drawable/money">
+            </ImageView>
+            <TextView
+                android:id="@+id/delete"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@+id/dele"
+                android:text="Delete"
+                android:textSize="20sp"
+                android:layout_margin="5dp"
+                android:drawableLeft="@drawable/ic_baseline_delete_24"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            </TextView>
+            <TextView
+                 android:id="@+id/a"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Total Income :"
+                android:layout_alignParentStart="true"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textAlignment="center">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/Income"
+                android:layout_below="@id/a"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0.00"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textAlignment="center">
+
+            </TextView>
+            <TextView
+                android:id="@+id/b"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Total Expense:"
+                android:layout_below="@id/Income"
+                android:layout_alignParentStart="true"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textAlignment="center">
+            </TextView>
+
+            <TextView
+                android:id="@+id/expense"
+                android:layout_below="@id/b"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0.00"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textAlignment="center">
+
+            </TextView>
+            <TextView
+                android:id="@+id/d"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Total Savings:"
+                android:layout_below="@id/expense"
+                android:layout_alignParentStart="true"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textAlignment="center">
+            </TextView>
+
+            <TextView
+                android:id="@+id/e"
+                android:layout_below="@id/d"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0.00"
+                android:textSize="20sp"
+                android:layout_alignParentBottom="true"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textAlignment="center">
+
+            </TextView>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+     <TextView
+         android:id="@+id/empty"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:gravity="center"
+         android:visibility="gone"
+         android:text="There is no data"
+         android:textAlignment="center"
+         android:textSize="30dp">
+
+     </TextView>
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_his"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:listitem="@layout/card_for_history"
+        tools:itemCount="5">
+     </androidx.recyclerview.widget.RecyclerView>
+    <com.airbnb.lottie.LottieAnimationView
+    android:id="@+id/animation_view1"
+        android:visibility="gone"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_centerInParent="true"
+    app:lottie_rawRes="@raw/nodata"
+    app:lottie_loop="true"
+    app:lottie_autoPlay="true" />
+</RelativeLayout>
+ </LinearLayout>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+</LinearLayout>

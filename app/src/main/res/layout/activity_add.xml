@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/btn_color"
+    tools:context=".UserActivities.Add">
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/animation_view"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_margin="10dp"
+                    app:lottie_autoPlay="true"
+                    app:lottie_loop="true"
+                    app:lottie_rawRes="@raw/back" />
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_centerInParent="true"
+                    android:layout_margin="10dp"
+                    android:src="@drawable/plus"></ImageView>
+
+            </RelativeLayout>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="600dp"
+                android:layout_gravity="center"
+                android:layout_margin="30dp"
+                app:cardCornerRadius="6dp"
+                app:cardElevation="10dp">
+
+                <androidx.core.widget.NestedScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="50dp"
+                            android:text="Add Your Expense"
+                            android:textAlignment="center"
+                            android:textColor="@color/black"
+                            android:textSize="30dp"
+                            android:textStyle="bold"></TextView>
+
+                        <EditText
+                            android:id="@+id/expense_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:background="@drawable/edit_text_bg"
+                            android:ems="10"
+                            android:hint="Enter Expense Name"
+                            android:inputType="textPersonName"
+                            android:padding="16dp"
+                            android:textAlignment="center"
+                            android:textColor="@color/black"
+                            android:textColorHint="@color/black" />
+
+                        <EditText
+                            android:id="@+id/amount"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:background="@drawable/edit_text_bg"
+                            android:ems="10"
+                            android:hint="Enter your Amount"
+                            android:inputType="number"
+                            android:padding="16dp"
+                            android:textAlignment="center"
+                            android:textColor="@color/black"
+                            android:textColorHint="@color/black" />
+
+                        <LinearLayout
+                            android:id="@+id/linear"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/Day"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginEnd="10dp"
+                                android:layout_marginBottom="10dp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:background="@drawable/edit_text_bg"
+                                android:drawableLeft="@drawable/ic_round_arrow_drop_down_circle_24"
+                                android:hint="Day"
+                                android:inputType="textPersonName"
+                                android:minHeight="48dp"
+                                android:padding="5dp"
+                                android:textColorHint="@color/black" />
+
+                            <TextView
+                                android:id="@+id/Month"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginEnd="10dp"
+                                android:layout_marginBottom="10dp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:background="@drawable/edit_text_bg"
+                                android:drawableLeft="@drawable/ic_round_arrow_drop_down_circle_24"
+                                android:ems="10"
+                                android:hint="Month"
+                                android:inputType="textPersonName"
+                                android:minHeight="48dp"
+                                android:padding="10dp"
+                                android:textColorHint="@color/black" />
+
+                            <TextView
+                                android:id="@+id/year"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginEnd="10dp"
+                                android:layout_marginBottom="10dp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:background="@drawable/edit_text_bg"
+                                android:drawableLeft="@drawable/ic_round_arrow_drop_down_circle_24"
+                                android:ems="10"
+                                android:hint="Year"
+                                android:inputType="textPersonName"
+                                android:minHeight="48dp"
+                                android:padding="10dp"
+                                android:textColorHint="@color/black" />
+
+                        </LinearLayout>
+
+                        <EditText
+                            android:id="@+id/Note"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:background="@drawable/edit_text_bg"
+                            android:ems="10"
+                            android:hint="Enter Note"
+                            android:inputType="textPersonName"
+                            android:padding="16dp"
+                            android:textAlignment="center"
+                            android:textColor="@color/black"
+                            android:textColorHint="@color/black" />
+
+                        <Button
+                            android:id="@+id/Done"
+                            android:layout_width="wrap_content"
+                            android:layout_height="55dp"
+                            android:layout_gravity="center"
+                            android:layout_margin="20dp"
+                            android:layout_marginBottom="40dp"
+                            android:backgroundTint="@color/btn_color"
+                            android:text="Done!"
+                            android:textColor="@color/white"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </androidx.core.widget.NestedScrollView>
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:text="O My Money"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"></TextView>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

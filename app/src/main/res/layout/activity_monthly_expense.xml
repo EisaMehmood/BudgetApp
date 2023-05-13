@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/btn_color"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".UserActivities.Monthly_expense">
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/animation_view"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_margin="10dp"
+                android:layout_alignParentStart="true"
+                app:lottie_rawRes="@raw/back"
+                app:lottie_loop="true"
+                app:lottie_autoPlay="true" />
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="10dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/plus">
+        </ImageView>
+
+    </RelativeLayout>
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="600dp"
+        app:cardElevation="10dp"
+        app:cardCornerRadius="6dp"
+        android:layout_gravity="center"
+        android:layout_margin="30dp">
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:textAlignment="center"
+                    android:textSize="30dp"
+                    android:layout_margin="50dp"
+                    android:text="Add Your Income">
+                </TextView>
+                <EditText
+                    android:id="@+id/amount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edit_text_bg"
+                    android:ems="10"
+                    android:layout_margin="10dp"
+                    android:hint="Enter your Amount"
+                    android:textAlignment="center"
+                    android:inputType="number"
+                    android:padding="16dp"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/black"/>
+                <LinearLayout
+                    android:id="@+id/linear"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:id="@+id/Month"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:textColorHint="@color/black"
+                        android:layout_weight="1"
+                        android:drawableLeft="@drawable/ic_round_arrow_drop_down_circle_24"
+                        android:background="@drawable/edit_text_bg"
+                        android:ems="10"
+                        android:gravity="center"
+                        android:hint="Month"
+                        android:inputType="textPersonName"
+                        android:minHeight="48dp"
+                        android:padding="10dp" />
+
+                    <TextView
+                        android:id="@+id/year"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:background="@drawable/edit_text_bg"
+                        android:layout_marginBottom="10dp"
+                        android:drawableLeft="@drawable/ic_round_arrow_drop_down_circle_24"
+                        android:layout_weight="1"
+                        android:ems="10"
+                        android:gravity="center"
+                        android:hint="Year"
+                        android:textColorHint="@color/black"
+                        android:inputType="textPersonName"
+                        android:minHeight="48dp"
+                        android:padding="10dp" />
+
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/Note"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edit_text_bg"
+                    android:ems="10"
+                    android:layout_margin="10dp"
+                    android:hint="Enter Note"
+                    android:textAlignment="center"
+                    android:inputType="textPersonName"
+                    android:padding="16dp"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/black"/>
+                <Button
+                    android:id="@+id/Done"
+                    android:layout_width="wrap_content"
+                    android:layout_height="55dp"
+                    android:layout_marginBottom="40dp"
+                    android:layout_gravity="center"
+                    android:layout_margin="20dp"
+                    android:backgroundTint="@color/btn_color"
+                    android:text="Done!"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="O My Money"
+        android:textSize="20sp"
+        android:textAlignment="center"
+        android:layout_margin="20dp"
+        android:textColor="@color/black"
+        android:textStyle="bold">
+    </TextView>
+    </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>
